@@ -16,13 +16,13 @@
 /// More information about integrating Google Tests can be found here https://google.github.io/googletest/quickstart-cmake.html
 /// You can learn about Mock Testing here: https://google.github.io/googletest/gmock_for_dummies.html
 
-
 // Forward declaration. Don't worry about this.
 class Actor;
 
 class Observer {
 public:
 	virtual void ReactToEvent(Actor* actor) = 0;
+	virtual ~Observer() = default;
 };
 
 class Actor {
@@ -35,7 +35,6 @@ public:
 	Actor(std::initializer_list<ObserverPtr> observers)
 		: mObservers(observers) {}
 
-
 	int GetCounter() const {
 		return mCounter;
 	}
@@ -47,10 +46,14 @@ public:
 			observer->ReactToEvent(this);
 		}
 	}
-
 };
 
 // This will not compile until you implement MockObserver.
+
+class MockObserver : public Observer {
+public:
+	MOCK_METHOD(void, ReactToEvent, (Actor* actor), (override));
+};
 
 TEST(ActorTest, ObserversAreCalled) {
 	auto observer = std::make_shared<MockObserver>();
