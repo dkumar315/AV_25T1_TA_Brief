@@ -1,0 +1,6 @@
+/home/devaansh/AV_25T1_TA_Brief/build/CMakeFiles/Question-1-out.dir
+/home/devaansh/AV_25T1_TA_Brief/build/CMakeFiles/Question-2-out.dir
+/home/devaansh/AV_25T1_TA_Brief/build/CMakeFiles/Question-3-out.dir
+/home/devaansh/AV_25T1_TA_Brief/build/CMakeFiles/test.dir
+/home/devaansh/AV_25T1_TA_Brief/build/CMakeFiles/edit_cache.dir
+/home/devaansh/AV_25T1_TA_Brief/build/CMakeFiles/rebuild_cache.dir
