@@ -20,3 +20,7 @@
 // Resources:
 // https://www.csselectronics.com/pages/can-bus-simple-intro-tutorial
 // https://www.csselectronics.com/pages/can-dbc-file-database-intro
+
+int main() {
+    return 0;
+}
